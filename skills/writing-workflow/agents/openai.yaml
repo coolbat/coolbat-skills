@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Workflow"
+  short_description: "Route long-form writing across briefs, drafts, and repurposing"
+  default_prompt: "Use $writing-workflow to handle a WeChat article, SEO blog, or bilingual long-form writing project."
