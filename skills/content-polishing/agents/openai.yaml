@@ -1,4 +1,0 @@
-interface:
-  display_name: "Content Polishing"
-  short_description: "Review drafts for facts, structure, and editorial quality"
-  default_prompt: "Use $content-polishing to review this draft for factual accuracy, structure, and platform fit."

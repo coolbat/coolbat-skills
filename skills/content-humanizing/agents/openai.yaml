@@ -1,4 +1,0 @@
-interface:
-  display_name: "Content Humanizing"
-  short_description: "Reduce visible AI tone while preserving facts and structure"
-  default_prompt: "Use $content-humanizing to make this draft sound less AI-written without changing its meaning."

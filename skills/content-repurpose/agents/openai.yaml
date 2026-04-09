@@ -1,4 +1,0 @@
-interface:
-  display_name: "Content Repurpose"
-  short_description: "Adapt finished articles into WeChat, SEO, or Xiaohongshu formats"
-  default_prompt: "Use $content-repurpose to adapt this finished article into platform-specific versions."

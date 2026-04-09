@@ -1,4 +1,0 @@
-interface:
-  display_name: "Content Briefing"
-  short_description: "Turn vague writing needs into a usable project brief"
-  default_prompt: "Use $content-briefing to turn this writing request into a structured brief before drafting."
