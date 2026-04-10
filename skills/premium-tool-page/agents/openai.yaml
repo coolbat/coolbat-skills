@@ -1,0 +1,4 @@
+interface:
+  display_name: "Premium Tool Page"
+  short_description: "Build a V2.0 premium tool page from a keyword — keyword analysis, page strategy, and template code or Stitch brief"
+  default_prompt: "Use $premium-tool-page to build a V2.0 premium tool page from a keyword."
