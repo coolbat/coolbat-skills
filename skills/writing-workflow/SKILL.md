@@ -82,6 +82,16 @@ Classify before doing anything else.
 
 **Task shape**: New project / Draft from source materials / Revise existing draft / Repurpose final article / Bilingual versions
 
+**Article archetype** — identify before drafting. Each archetype has a different writing emphasis:
+
+| Archetype | Core premise | Writing emphasis |
+|-----------|-------------|-----------------|
+| **Investigation / Experiment** | "I did this so you don't have to" | Process narrative, layered discoveries, first-person reactions at each step |
+| **Product Experience** | "Come explore this with me" | Scene-driven demos, genuine reactions, natural comparisons to alternatives |
+| **Phenomenon Analysis** | "Did you notice this? Here's what's behind it" | Observation → curiosity → research → philosophical elevation |
+| **Tool / Method Share** | "I found something good" | Personal story as wrapper, reveal the tool naturally, show a jaw-dropping result |
+| **Methodology / Opinion** | "Here's what I've figured out" | Every section lands on an executable action; honest about learning curve and failure points; open with humility, close by circling back to all action items |
+
 Do not skip classification.
 
 ## Workflow
@@ -163,38 +173,84 @@ Follow **Sub-skill: content-drafting** — full draft stage.
 
 Follow **Sub-skill: content-polishing**.
 
-### Step 8a. Quality Gate (required before humanizing)
+### Step 8a. Quality Gate — Four-Layer Check (required before humanizing)
 
-Run after polishing. Do not proceed to humanizing until this passes.
+Run after polishing. Do not proceed to humanizing until all four layers pass.
 
-**Hard rules — all 4 must pass:**
-- [ ] Does the opening sentence contain a specific number, date, or strong contrast?
-- [ ] Is the article free of filler phrases: 随着/飞速发展/改变游戏规则/颠覆/赋能/全面/深度?
-- [ ] Is the core argument supported by a specific example or data point?
-- [ ] Does the ending leave the reader with a concrete action or takeaway?
+---
 
-**Soft rules — at least 3 of 4 must pass:**
-- [ ] Is the hardest concept explained with an everyday analogy?
-- [ ] Is there at least one sentence that can spread independently, out of context?
-- [ ] Are vague hedges removed: "在某种程度上" / "可以说" / "相对来说"?
-- [ ] Does the article avoid repeating the same point in different words?
+**L1 — Hard Rules (scan and fix before anything else)**
 
-**Platform rules (apply based on target):**
+All must pass. No exceptions.
 
-WeChat long-form:
-- [ ] Does the article open with a concrete scene, problem, or conflict?
-- [ ] Does the ending include a topic-specific engagement prompt?
+- [ ] Opening does NOT start with: "在当下这个时代" / "随着AI的发展" / "近年来" or any macro trend framing
+- [ ] Article is free of filler phrases: 随着/飞速发展/改变游戏规则/颠覆/赋能/全面/深度/不难发现/值得注意的是/综上所述
+- [ ] No vague hedges left unfixed: "在某种程度上" / "可以说" / "相对来说" / "从某种意义上说"
+- [ ] Core argument is supported by a specific example, data point, or scene — not abstract assertion
+- [ ] No fabricated examples ("比如有一次...") — only real or explicitly hypothetical scenarios
+- [ ] All AI tools and products named specifically (no "某AI工具" / "相关模型")
 
-Xiaohongshu:
-- [ ] Word count between 200-500?
-- [ ] Closing question specific enough for readers to answer directly?
-- [ ] Title or first line creates curiosity or information gap?
+Failure → fix immediately before proceeding to L2.
+
+---
+
+**L2 — Style Consistency**
+
+- [ ] Opening enters from a specific, present-tense event or scene — not a general statement
+- [ ] First sentence creates "then what?" momentum
+- [ ] Sentence lengths vary — no 3+ consecutive sentences of similar length
+- [ ] At least one sentence stands alone as a paragraph for emphasis
+- [ ] Sections that drift from the main thread are pulled back with a bridging sentence
+- [ ] Knowledge is introduced as "just remembered this" — not "let me explain X"
+- [ ] At least one moment of self-disclosure: uncertainty, failure, or genuine reaction
+
+Archetype-specific checks:
+- Investigation / Experiment → does the reader feel they're discovering alongside the author, step by step?
+- Product Experience → is there a "wow" moment shown, not just described?
+- Phenomenon Analysis → does the article move from observation → curiosity → research → elevation?
+- Tool / Method Share → is the tool revealed through a story, not announced upfront?
+- Methodology / Opinion → does every section end with something the reader can do today? Is the learning curve honestly described?
+
+Pass threshold: all universal checks + relevant archetype check.
+
+---
+
+**L3 — Content Quality**
+
+- [ ] Every core claim has a concrete scene, person, or data point behind it — no floating assertions
+- [ ] At least one cultural, historical, or philosophical reference that elevates the specific topic to a larger frame — and it feels discovered, not inserted
+- [ ] The opposing view or reader's likely objection is acknowledged before the author's position is stated
+- [ ] The ending reaches a genuine conclusion — it does not just stop or summarize
+- [ ] There is at least one sentence that can be screenshot and shared out of context
+
+Platform checks:
+- WeChat long-form: opens with concrete scene/problem/conflict; ends with a topic-specific engagement prompt (not generic "欢迎留言")
+- Xiaohongshu: 200–500 words; closing question specific enough for readers to answer directly; title or first line creates curiosity gap
+- SEO blog: heading hierarchy intact; CTA aligned with search intent
+
+Pass threshold: all universal checks + relevant platform check.
+
+---
+
+**L4 — Alive-Person Final Read**
+
+Read the full article as a reader who knows nothing about the topic. Answer:
+
+- Does this feel like a specific person sharing something that genuinely moved them — or like an AI outputting information?
+- Is there at least one moment where the author's voice is unmistakable?
+- Does the author's stance come through clearly, without hedging it into mush?
+- Is there any paragraph where attention drops? If yes, that paragraph needs fixing.
+
+This layer has no checklist. It is a judgment call. If any section reads as "AI generating content," return it to content-humanizing for a targeted pass on that section only.
+
+---
 
 **Scoring logic:**
-- Hard rule failure → return to the relevant polish pass for targeted fix. Do not rewrite the whole article.
-- Soft rules 2+ failures → evaluate whether a section needs rewriting.
-- Record all failures in `polish/review-notes.md` with specific references.
-- Re-score after fixes. Repeat until all hard rules pass and soft rules ≥ 3/4.
+- L1 failure → fix before moving to L2. Do not proceed with unfixed hard rule violations.
+- L2 or L3 failure → fix the specific failing item. Do not rewrite the whole article.
+- L4 failure → identify the specific paragraph(s) and send back to content-humanizing for a targeted pass.
+- Record all failures and fixes in `polish/review-notes.md` with specific line references.
+- Re-check after fixes. Repeat until all four layers pass.
 
 ### Step 9. Humanize the draft
 
@@ -372,6 +428,7 @@ Do not use when a complete brief already exists.
 
 - project name, content type, editorial stance, language mode
 - target audience, primary goal, topic or working title, target length, desired tone
+- **article archetype** (see Classification section): Investigation / Product Experience / Phenomenon Analysis / Tool Share / Methodology
 - unique angle: what makes this article worth reading over existing content
 - competitive gap: where existing coverage falls short
 - whether research / images / repurposing are required
@@ -382,8 +439,9 @@ Optional: keywords, forbidden claims or phrases, desired CTA, reference pieces
 
 1. Check for existing brief at `brief/brief.md`, `brief/requirements.md`, `meta/project.json` — reuse if complete
 2. Fill missing fields from user's request or ask concise follow-up questions for essentials only
-3. Normalize into: objective / audience / deliverables / constraints / open risks
-4. Save: `brief/brief.md`, `brief/requirements.md`, `meta/project.json`
+3. **Determine article archetype** — if user hasn't specified, ask: "这篇文章的切入方式更像哪种：亲自下场实验、产品体验带读者、现象分析、推荐工具/方法，还是方法论分享？" Match to the five archetypes in Classification.
+4. Normalize into: objective / audience / deliverables / constraints / open risks
+5. Save: `brief/brief.md`, `brief/requirements.md`, `meta/project.json`
 
 ### Guardrails
 
@@ -457,6 +515,38 @@ Skip for purely personal essays or timeless opinion pieces.
 ## Sub-skill: content-drafting
 
 Use when a validated brief exists and any required research is complete.
+
+### AI Role Boundaries
+
+Clarify division of labor before drafting begins.
+
+**AI擅长做的（放心交给AI）**
+- 查找支撑论点的证据、数据、案例
+- 寻找跨领域类比和比喻
+- 在作者确认的角度基础上扩展细节
+- 补充学术背景、历史脉络、概念解释
+- 提出结构调整建议、衔接过渡
+
+**AI做了会暴露的（必须作者来）**
+- 第一视角的亲身观察和真实经历
+- 核心创意角度的决策（选哪个切入点）
+- 真实情绪的表达（"我当时就愣住了" vs "我当时很震撼"）
+- 基于共情的人物刻画（从数据点还原真实人物）
+- 文化/哲学升华的那一跳（感觉是发现，不是插入）
+
+**理想协作流程**
+
+```
+作者提供：素材 + 核心观点 + 亲身经历 + 情绪节点
+    ↓
+AI补充：背景知识 + 证据 + 结构建议 + 初稿框架
+    ↓
+作者改写：注入自己的声音、真实细节、情绪颗粒度
+    ↓
+AI检查：四层质量关 (Step 8a)
+```
+
+If the author has not provided first-person material or a core angle, prompt before drafting: "在开始写之前，能分享一下你对这个话题的亲身经历或最强烈的个人判断吗？这会决定文章是否有真实的作者声音。"
 
 ### Workflow
 
