@@ -2,6 +2,48 @@
 
 A structured skill bundle for long-form content production across WeChat, SEO blogs, and Xiaohongshu.
 
+---
+
+## Installation
+
+### Quick Install (Recommended)
+
+```bash
+curl -sSL https://raw.githubusercontent.com/coolbat/coolbat-skills/main/skills/writing-workflow/install.sh | bash
+```
+
+This installs `writing-workflow` and all required sub-skills into `~/.claude/skills/`.
+
+### Manual Install
+
+```bash
+git clone https://github.com/coolbat/coolbat-skills.git
+cd coolbat-skills/skills/writing-workflow
+./install.sh
+```
+
+### Options
+
+```bash
+./install.sh --dry-run   # preview what would be installed
+./install.sh --help      # show usage
+```
+
+### Dependencies
+
+This skill requires the following sub-skills in `~/.claude/skills/`:
+
+- `content-briefing`
+- `content-research`
+- `content-drafting`
+- `content-polishing`
+- `content-humanizing`
+- `content-repurpose`
+- `content-style-learning`
+- `content-topic-selection`
+
+The install script handles all of these automatically. Re-running is safe — already-installed skills are skipped.
+
 This is not a single prompt. It is a routed workflow system made of 8 skills that cover the full journey from brief to distributed content.
 
 ---
@@ -361,23 +403,6 @@ When 5+ projects exist in history, the workflow reads this file at startup and s
 □ Retrospective written to meta/retrospective.md
 □ Project history updated in meta/project-history.yaml
 ```
-
----
-
-## Install
-
-Copy the `skills/` directory into your local skills folder:
-
-```bash
-# for ~/.agents/skills setups
-cp -r skills/* ~/.agents/skills/
-```
-
-Keep intact:
-- `SKILL.md`
-- `agents/openai.yaml` (if present)
-- `assets/templates/`
-- `references/` (where present)
 
 ---
 
