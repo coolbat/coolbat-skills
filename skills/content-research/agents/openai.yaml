@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Research"
+  short_description: "Research current claims, sources, and freshness risks for writing"
+  default_prompt: "Use $content-research to verify current facts, collect sources, and summarize research for this article."

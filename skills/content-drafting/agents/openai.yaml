@@ -1,0 +1,4 @@
+interface:
+  display_name: "Content Drafting"
+  short_description: "Generate angles, outlines, and drafts for long-form content"
+  default_prompt: "Use $content-drafting to propose angles, build an outline, and draft this article."
