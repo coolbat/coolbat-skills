@@ -77,55 +77,42 @@ Do not ______.
 
 ---
 
-## Quick Mode Variants
+## Output Mode Detection
 
-### Brief Mode
+### Brief Mode (auto-detected)
 
-Trigger words: "quick judgment", "brief"
+**Triggers:**
+- Short question (< 20 words) with no business context
+- Asking only "which framework" or "how to choose"
+- User explicitly says: "quick", "brief", "just tell me which framework"
 
-**Output structure**:
-1. Problem Diagnosis (1 sentence)
-2. Recommended Framework (1 only)
-3. Simplified Template
-4. Next Action (1 sentence)
-
----
-
-### Template-Only Mode
-
-Trigger words: "just the template", "template only"
-
-**Output structure**:
-Skip diagnosis and explanation, directly output:
-- Framework name
-- Fill-in template
-- Instructions (if needed)
+**Output structure (3 sections):**
+1. Problem diagnosis (1 sentence)
+2. Framework recommendation + rationale (condensed, 1–2 sentences per framework)
+3. Next action (1 sentence) + "For a full analysis, share [X details]"
 
 ---
 
-### Compare Mode
+### Deep Mode (auto-detected)
 
-Trigger words: "compare X and Y"
+**Triggers:**
+- User provides specific business context (product name, data, background)
+- User explicitly asks: "help me apply", "give me a template", "full analysis", "deep dive"
+- Complex question (> 50 words) or involves multiple decision dimensions
 
-**Output structure**:
-```
-## [Framework X] vs [Framework Y]
+**Output structure (full 6 sections):**
+Follow the standard 6-section structure above.
 
-### When to Use Each
-- X fits when: ...
-- Y fits when: ...
+---
 
-### Key Differences
-| Dimension | X | Y |
-|-----------|---|---|
-| Purpose   | ... | ... |
-| Input     | ... | ... |
-| Output    | ... | ... |
+### Manual Triggers
 
-### Recommendation
-If [condition 1], use X.
-If [condition 2], use Y.
-```
+| Trigger phrase | Behavior |
+|---------------|----------|
+| "quick" / "brief" | Brief mode: 1 framework + condensed template |
+| "deep" / "full" / "complete" | Deep mode: full 6-section output |
+| "just the template" | Skip diagnosis, output fill-in template directly |
+| "compare X and Y" | Side-by-side framework boundary comparison |
 
 ---
 

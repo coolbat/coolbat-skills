@@ -93,6 +93,27 @@ Recommended frameworks:
 - AARRR
 - User Journey Map
 
+### H. Hypothesis Validation
+
+Typical prompts:
+- How do I quickly validate this idea?
+- What should the MVP test?
+- Which assumption is most dangerous?
+- How do I design a small experiment?
+
+Recommended frameworks:
+- Lean Canvas (identify highest-risk assumption)
+- Assumption Tree (structure and rank assumptions)
+
+Typical combinations:
+- Early MVP validation: Lean Canvas + Assumption Tree
+- Quick experiment design: Assumption Tree + ICE
+
+When to use:
+- 0→1 stage with high uncertainty
+- Have an idea but unsure which assumption to test first
+- Need to design minimum experiments to validate core assumptions
+
 ## Rule 3: Consider product stage
 
 ### 0→1
@@ -138,3 +159,18 @@ Examples:
 - Use JTBD, not Persona, when the core issue is motivation.
 - Use RICE, not Kano alone, when the core issue is prioritization.
 - Use North Star Metric, not OKR alone, when the core issue is product-value focus.
+
+---
+
+## Quick Reference Card
+
+| User question | First framework | Optional add-on | Avoid |
+|--------------|-----------------|-----------------|-------|
+| Should we build this? | JTBD | Kano + RICE | Jumping straight to scope |
+| Which feature first? | RICE | MoSCoW | Kano alone |
+| Growth is stuck | AARRR | Journey Map + 5 Whys | Looking only at acquisition |
+| How to set North Star? | North Star Metric | HEART | Choosing vanity metrics |
+| Experience feels bad | Journey Map | HEART + 5 Whys | Single-point fixes |
+| Post-launch underperformed | 5 Whys | HEART + AARRR | Staying at surface symptoms |
+| Validate an idea fast | Lean Canvas | Assumption Tree | Building without testing |
+| Competitive positioning | JTBD | Kano + Lean Canvas | Feature-by-feature comparison |
