@@ -150,6 +150,48 @@ cp -r coolbat-skills/skills/stitch-design-brief ~/.claude/skills/
 
 ---
 
+### Product — `product-thinking-router`
+
+面对产品问题时，快速诊断问题类型、选出最合适的思维框架，并直接应用到具体情境。
+
+**适用场景：**
+- 不知道该用哪个产品框架，需要快速匹配
+- 有具体产品问题（要不要做某功能、增长停滞了、需求怎么排优先级），需要可执行的分析过程和模板
+- 想避免误用框架（如把 RICE 用于理解用户动机，把 AARRR 用于 UX 分析）
+- 中英双语均支持，自动识别输入语言
+
+**支持的 12 个框架：**
+
+| 类别 | 框架 |
+|------|------|
+| 方向判断 | JTBD、Kano、Lean Canvas、Assumption Tree |
+| 优先级排序 | RICE、ICE、MoSCoW |
+| 诊断分析 | AARRR、5 Whys、Journey Map |
+| 指标设计 | North Star Metric、HEART |
+
+**输出结构（7 段）：**
+
+```
+1. 问题诊断：这是什么类型的问题？
+2. 推荐框架：1~3 个（不超过 3 个）
+3. 为什么选这些：包含"为什么不选某框架"的说明
+4. 套用到当前问题：直接应用，不只是解释定义
+5. 可直接填写的模板：checklist / 表格 / 填空
+6. 下一步建议：明确的行动
+7. 误用提醒：当前场景最容易犯的错误
+```
+
+**安装：**
+
+```bash
+git clone https://github.com/coolbat/coolbat-skills.git
+cp -r coolbat-skills/skills/product-thinking-router ~/.claude/skills/
+```
+
+安装后，在 Claude 中输入 `/product-thinking-router` 启动，或直接提出产品问题触发路由。
+
+---
+
 ## 组合使用
 
 **内容生产全流程：**
@@ -178,7 +220,7 @@ PRD / 需求文档 → /stitch-design-brief → Stitch 生成
 
 ```
 skills/
-  writing-workflow/       ← 主路由 + 安装脚本
+  writing-workflow/         ← 主路由 + 安装脚本
   content-briefing/
   content-research/
   content-drafting/
@@ -187,8 +229,9 @@ skills/
   content-repurpose/
   content-style-learning/
   content-topic-selection/
-  premium-tool-page/      ← 精品工具页构建
-  stitch-design-brief/    ← Stitch 设计节点
+  premium-tool-page/        ← 精品工具页构建
+  stitch-design-brief/      ← Stitch 设计节点
+  product-thinking-router/  ← 产品思维框架路由
 ```
 
 ---
