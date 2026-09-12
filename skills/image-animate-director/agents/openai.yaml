@@ -1,0 +1,14 @@
+interface:
+  display_name: Image Animate Director
+  short_description: 图片动画导演：统一制作定格短片、游戏精灵动作与 GIF 表情循环
+  default_prompt: 使用 $image-animate-director，把我的角色参考图制作成动画，根据用途选择 stop-motion、animated-sprite
+    或 gif-motion 模式。
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

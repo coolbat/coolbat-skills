@@ -192,6 +192,46 @@ cp -r coolbat-skills/skills/product-thinking-router ~/.claude/skills/
 
 ---
 
+### Animation — `image-animate-director`
+
+从角色参考图或静态画面制作逐帧动画，统一管理动作计划、参考图、帧版本、连续性检查和导出。
+
+| 模式 | 用途 | 输出 |
+| --- | --- | --- |
+| `stop-motion` | 定格短片、手工材质动画 | MP4、GIF |
+| `animated-sprite` | 2D 游戏的待机、行走等动作 | RGBA 图集、自定义 JSON 时序与 pivot 元数据 |
+| `gif-motion` | 表情、贴纸、插画循环 | GIF、保留源透明度的动画 WebP |
+
+模式与输出格式独立，也可以为游戏动作生成 GIF 预览。前身是 `stop-motion-director`，已有项目兼容。
+
+**使用示例：**
+
+```text
+使用 $image-animate-director，stop-motion 模式：
+让这个角色抬头、眨眼，制作 2 秒定格动画，固定镜头。
+
+使用 $image-animate-director，animated-sprite 模式：
+制作角色待机循环，透明背景，脚底位置固定，导出图集和时序元数据。
+```
+
+**依赖与说明：**
+
+- 完整工作流需要宿主提供图像生成或编辑工具；脚本负责计划、登记、检查和导出，不会自行调用图像模型。
+- Python 3.10+、Pillow；MP4 导出还需要 FFmpeg（含 libx264）和 FFprobe。动画 WebP 需要 Pillow 的 WebP 编码支持。
+- GIF 使用指定背景合成；透明素材交付使用 RGBA 图集或 WebP。
+- 游戏图集采用自定义 JSON，尚未提供 Unity、Godot 或 Phaser 的原生导入适配。
+- 14 项自动化测试验证项目状态、修复依赖、时序、透明度和导出；生成角色的一致性仍需逐帧视觉检查。
+
+查看 [完整技能说明](skills/image-animate-director/SKILL.md)。使用时将整个 `skills/image-animate-director` 目录安装到宿主的技能目录。
+
+**运行测试（仓库根目录）：**
+
+```bash
+python -m unittest discover -s skills/image-animate-director/scripts/tests -v
+```
+
+---
+
 ## 组合使用
 
 **内容生产全流程：**
@@ -220,6 +260,7 @@ PRD / 需求文档 → /stitch-design-brief → Stitch 生成
 
 ```
 skills/
+  image-animate-director/   ← 定格、游戏精灵、动图统一工作流
   writing-workflow/         ← 主路由 + 安装脚本
   content-briefing/
   content-research/

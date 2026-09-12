@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "title": "Caterpillar looks up and blinks",
+  "brief": "A green handmade clay caterpillar hangs from a branch, raises its head a little, blinks once, and relaxes. Two-second fixed-camera shot.",
+  "canvas": {
+    "width": 1024,
+    "height": 1024,
+    "background": "#eee4d4"
+  },
+  "action_fps": 8,
+  "output_fps": 24,
+  "loop": false,
+  "invariants": [
+    "Keep exact character identity, eye spacing, body segment count and clay material from the master.",
+    "Keep branch, tabletop, camera, composition and soft light fixed.",
+    "Keep the upper attachment gripping the same place on the branch."
+  ],
+  "limits": {
+    "max_attempts_per_frame": 3,
+    "max_total_attempts": 32
+  },
+  "references": [
+    {
+      "id": "master",
+      "role": "Approved character and scene master; preserve identity and fixed set",
+      "path": "master.png"
+    }
+  ],
+  "frames": [
+    {
+      "id": "f0001",
+      "goal": "Resting pose matching the master, eyes open, head relaxed.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0002",
+      "goal": "Head just begins to lift; eyes open; upper attachment fixed.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0003",
+      "goal": "Head a quarter of the way to a small upward tilt; slight body bend.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0004",
+      "goal": "Head halfway to the small upward tilt; eyes looking slightly upward.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0005",
+      "goal": "Head three quarters raised; preserve eye size and smile.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0006",
+      "goal": "Head reaches a modest upward tilt; motion settles; eyes open.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0007",
+      "goal": "Hold the raised-head pose; eyelids begin lowering.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0008",
+      "goal": "Raised-head pose; eyelids halfway closed with eye positions fixed.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0009",
+      "goal": "Raised-head pose; eyes gently fully closed at the blink midpoint.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0010",
+      "goal": "Raised-head pose; eyelids halfway open again.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0011",
+      "goal": "Raised-head pose; eyes fully open; blink complete.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0012",
+      "goal": "Head begins easing down from the raised pose; eyes open.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0013",
+      "goal": "Head halfway back to rest; body bend gradually relaxing.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0014",
+      "goal": "Head nearly back at rest; smile and attachment unchanged.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0015",
+      "goal": "Head reaches relaxed resting pose; eyes open.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    },
+    {
+      "id": "f0016",
+      "goal": "Resting pose settles; original proportions and peaceful expression.",
+      "hold": 1,
+      "reference_ids": [
+        "master"
+      ]
+    }
+  ]
+}
