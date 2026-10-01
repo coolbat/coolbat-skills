@@ -1,3 +1,8 @@
+---
+name: product-thinking-router
+description: "Choose and apply product frameworks for a concrete strategy, discovery, prioritization, growth, or diagnosis question."
+---
+
 # Product Thinking Router
 
 ## Language Detection
